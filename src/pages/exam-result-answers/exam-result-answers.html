@@ -1,0 +1,25 @@
+<ion-header>
+   <ion-navbar>
+      <ion-title>Question with Correct Answer</ion-title>
+   </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+   <ion-list radio-group>
+      <ion-list-header text-wrap>
+         <h1> Q: {{questionName}}</h1>
+      </ion-list-header>
+      <ion-item *ngFor="let answer of answers">
+         <ion-label text-wrap>{{ answer.name }}</ion-label>
+         <ion-radio item-left [checked]="answer.iscorrect" [disabled]="!answer.iscorrect" color="secondary"></ion-radio>
+      </ion-item>
+      <ion-list>
+         <ion-item>
+            <h2>Your Answer:</h2>
+            <p text-wrap class="my-answer">
+               <ion-icon class="font-size-2" name="{{ isCorrect == isMyAnswer ? 'checkmark': 'close' }}" aria-hidden="true"></ion-icon> <span>{{myAnswerTxt}}</span></p>
+         </ion-item>
+      </ion-list>
+
+   </ion-list>
+</ion-content>

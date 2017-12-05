@@ -1,0 +1,31 @@
+page-exam-overview-detail {
+   .list-md {
+      margin: 0
+   }
+
+   .adjust-center {
+      position: relative;
+      left: -25px;
+   }
+
+   .img-circle {
+      vertical-align: middle; 
+      display: table-cell; 
+      width:90px; 
+      height:90px; 
+      border-radius:50%;
+   }
+   
+   .img-circle p {
+      color:#FFF;
+      font-size: 0.8em;
+   }
+
+   .image-object1 {
+      background: #4e9b31;
+      border: thin #4e9b31 solid;
+      color:#FFF;
+      opacity: 0.6;
+   }
+}
+

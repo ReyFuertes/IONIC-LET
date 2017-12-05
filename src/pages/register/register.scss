@@ -1,0 +1,45 @@
+page-register {
+   .select-ios {
+      padding: 11px 8px 11px 0;
+      width: 100%;
+      max-width: 100%;
+   }
+
+   .card-content-md h2 {
+      font-size: 24px;
+   }
+
+   .register-title-container {
+      padding:10px;
+   }
+
+   .select-icon-inner {
+      float:right;
+   }
+
+   .card-ios h2 {
+      font-size: 20px;
+   }
+
+   ion-item {
+      border-bottom: thin #eee solid !important;
+      padding-left:0;
+   }
+
+    .select-md {
+       padding-left: 7px !important;
+    }
+
+    ion-select {
+       width: 100%;
+       max-width: 100%;
+    }
+
+    .errors {
+      color: red;
+      padding: 2px 0;
+      font-size: 14px;
+      background: transparent;
+   }
+}
+

@@ -1,0 +1,46 @@
+page-exam-start {
+   .answer-container {
+      min-height: 150px;
+   }
+   .list-header-md {
+      margin-bottom: 0;
+      min-height: 1.4rem;
+   }
+
+   .segment-button,
+   .segment-activated {
+      max-height: 50px !important;
+      line-height: 20px !important;
+   }
+
+   .item-md .radio-md[item-left],
+   .item-md .radio-md[item-start] {
+      margin: 15px 8px 5px 0;
+   }
+
+   ion-list {
+      width: 100%;
+   }
+
+   .list-md {
+      margin-bottom: 0;
+   }
+
+   .list-md:last-child {
+      margin-bottom: 10px;
+   }
+
+   .item-radio {
+      padding-left: 26px;
+      font-size: 1.4rem;
+   }
+
+   .item-md h2 {
+      font-weight: 500;
+      text-shadow: none;
+   }
+
+   .label-md {
+      margin-bottom: 0 !important;
+   }
+}

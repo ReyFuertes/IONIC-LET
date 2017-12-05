@@ -1,0 +1,42 @@
+page-exam-result-answers {
+   .list-header-md {
+      border-top: none;
+      padding-left: 10px;
+   }
+
+   .ion-md-close {
+      position: relative;
+      top:3px;
+      color:red;
+      font-size: 24px;
+   }
+
+   .ion-md-checkmark {
+      font-size: 24px;
+      color:green
+   }
+
+   ion-list-header {
+      margin-bottom: 0;
+   }
+
+   .blackColor {
+      background-color: #000;
+      color: #000 !important;
+   }
+
+   .my-answer {
+      margin: 5px 10px;
+      padding: 0;
+      position: relative;
+      top: 2px;
+   }
+
+   .my-answer span {
+      text-decoration: underline;
+   }
+
+   .radio-md.radio-disabled, .item-md.item-radio-disabled ion-label {
+      text-decoration: line-through !important;
+   }
+}

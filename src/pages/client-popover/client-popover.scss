@@ -1,0 +1,23 @@
+page-client-popover {
+   .popover-list ion-item {
+      padding:5px;
+      margin:5px
+   }
+
+   .popover-list ion-list-header {
+      margin-bottom: 0;
+   }
+
+   .popover-list ion-label {
+      margin:5px;
+      color:#666 !important;
+   }
+
+   .popover-list .input-wrapper {
+      padding:5px;
+   }
+
+   .list-header-md {
+      padding-left: 8px;
+   }
+}

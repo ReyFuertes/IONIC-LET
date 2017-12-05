@@ -1,0 +1,45 @@
+<ion-header>
+   <ion-navbar hideBackButton>
+      <ion-title text-center><ion-icon name="paper"></ion-icon> Examination</ion-title>
+   </ion-navbar>
+
+   <ion-toolbar>
+      <ion-segment class="vertical-align-content" *ngIf="tabCategories" [(ngModel)]="categories">
+         <ion-segment-button text-wrap (click)="loadSelections()" *ngFor="let tab of tabCategories" [value]="tab.id">{{ tab.name }}</ion-segment-button>
+      </ion-segment>
+   </ion-toolbar>
+</ion-header>
+
+<ion-content>
+   <div [ngSwitch]="categories">
+      <div *ngFor="let tab of tabCategories">
+         <ion-list *ngSwitchCase="tab.id">
+            <ion-row *ngFor="let question of questionArr; let i = index" >
+               <ion-list *ngIf="tab.name == question.category_majoring" [(ngModel)]="selections[question.id]" [@growSlowly]="" class="radio-group-selection-{{tab.id}} answer-container" [id]="question.id" radio-group>
+                  <ion-list-header text-wrap>
+                     <h2>{{ question.idx + '. ' + question.name }}</h2>
+                  </ion-list-header>
+
+                  <ion-list *ngFor="let answer of answers">
+                     <ion-item *ngIf="answer.question_id === question.id">
+                        <ion-label>{{ answer.name }}</ion-label>
+                        <ion-radio item-left [value]="answer"></ion-radio>
+                     </ion-item>
+                  </ion-list>
+
+               </ion-list>
+            </ion-row>
+         </ion-list>
+      </div>
+   </div>
+</ion-content>
+
+<ion-footer>
+   <ion-toolbar>
+      <ion-row>
+         <ion-col text-center>
+            <button ion-button id="btn-submit" (click)="onSubmit()" round large color="secondary">Submit</button>
+         </ion-col>
+      </ion-row>
+   </ion-toolbar>
+</ion-footer>

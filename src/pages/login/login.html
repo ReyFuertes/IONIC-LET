@@ -1,0 +1,44 @@
+<ion-header *ngIf="!isLogin">
+   <ion-navbar hideBackButton>
+      <ion-title text-center>
+         <i class="fa fa-mobile" aria-hidden="true"></i> {{ appTitle }}
+      </ion-title>
+   </ion-navbar>
+</ion-header>
+
+<ion-content padding *ngIf="!isLogin" class="cards-bg">
+   <div class="bg-layout-container"></div>
+   <ion-card>
+      <ion-card-content>
+         <div text-center class="register-title-container">
+            <h2 class="login-title-text">
+               <i class="fa fa-lock" aria-hidden="true"></i> Login</h2>
+         </div>
+         <form novalidate [formGroup]="userLoginForm" (ngSubmit)="onLogin()">
+            <ion-row>
+               <ion-col>
+                  <ion-list inset>
+                     <ion-item>
+                        <ion-input placeholder="Username" formControlName="username" id="username" value="" type="text" autocomplete="false"></ion-input>
+                     </ion-item>
+                     <ion-item>
+                        <ion-input placeholder="Password" formControlName="password" id="password" value="" type="password" autocomplete="false"></ion-input>
+                     </ion-item>
+                  </ion-list>
+               </ion-col>
+            </ion-row>
+            <ion-row>
+               <ion-col text-center>
+                  <div *ngIf="invalidFieldMsg" class="alert alert-danger errors">{{ invalidFieldMsg }}</div>
+                  <button ion-button class="submit-btn" round large full type="submit" [disabled]="!userLoginForm.valid">Login</button>
+               </ion-col>
+            </ion-row>
+         </form>
+      </ion-card-content>
+   </ion-card>
+   <div text-center>
+      <ion-col text-center>
+         <button (click)="gotoRegisterPage()" ion-button clear>Register</button>
+      </ion-col>
+   </div>
+</ion-content>

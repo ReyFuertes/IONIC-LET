@@ -1,0 +1,21 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>{{ examDetails[0].name }}</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list class="category-list" *ngIf="examDetails">
+    <ion-item *ngFor="let detail of examDetails; let i = index" no-margin no-padding>
+      <h1>{{ detail.ismajoring == '1' ? 'Majoring: ' : '' }} {{ detail.name }}</h1>
+      <hr/>
+      <p text-wrap style="line-height:25px; text-align: justify; ">{{ detail.description }}</p>
+    </ion-item>
+  </ion-list>
+  <ion-row class="padding-top-15">
+    <ion-col text-center>
+      <button ion-button id="btn-start" (click)="beginExam()" round large full color="secondary">Begin Exam</button>
+    </ion-col>
+  </ion-row>
+</ion-content>

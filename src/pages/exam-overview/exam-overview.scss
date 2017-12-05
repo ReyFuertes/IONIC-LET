@@ -1,0 +1,85 @@
+page-exam-overview {
+   .category-list {
+      padding: 0.5em 0;
+   }
+   
+   .list-md {
+      margin: 0
+   }
+
+   .adjust-center {
+      position: relative;
+      left: -25px;
+   }
+
+   .img-circle {
+      vertical-align: middle; 
+      display: table-cell; 
+      width:90px; 
+      height:90px; 
+      border-radius:50%;
+   }
+   
+   .img-circle p {
+      color:#FFF;
+      font-size: 0.8em;
+   }
+
+   .image-object1 {
+      background: #4e9b31;
+      border: thin #4e9b31 solid;
+      color:#FFF;
+      opacity: 0.6;
+   }
+   
+   .image-object2 {
+      background: #0098fd;
+      border: thin #0098fd solid;
+      opacity: 0.6;
+      color:#FFF;
+   }
+   
+   .image-object3 {
+      background: #d74d2f; 
+      border: thin #d74d2f solid;
+      opacity: 0.6;
+      color:#FFF;
+   }
+   
+   .image-object4 {
+      background: #7ac9ed; 
+      border: thin #7ac9ed solid;
+      opacity: 0.6;
+      color:#FFF;
+   }
+   
+   .image-object5 {
+      background: #999;
+      border: thin #999 solid;
+      opacity: 0.6;
+      color:#FFF;
+   }
+   
+   .image-object6 {
+      background: #563d7c;
+      border: thin #563d7c solid;
+      opacity: 0.6;
+      color:#FFF;
+   }
+
+   ion-list {
+      border-bottom: thin #eee solid;
+   }
+
+   ion-item .item-md:last-child {
+      border-bottom:none;
+   }
+
+   .popover-list .item-block {
+      min-height: 1rem !important;
+   }
+
+   
+
+}
+

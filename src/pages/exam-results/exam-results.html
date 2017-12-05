@@ -1,0 +1,51 @@
+<ion-header>
+   <ion-navbar hideBackButton>
+      <ion-title text-center>
+         <ion-icon name="clipboard"></ion-icon> Exam Results
+         <span text-right>
+            {{categoryEarnedScore}}/{{categoryTotalScore}}
+         </span>
+      </ion-title>
+
+   </ion-navbar>
+
+   <ion-toolbar>
+      <ion-segment class="vertical-align-content" *ngIf="tabs" [(ngModel)]="categories">
+         <ion-segment-button class="line-height-18" text-wrap *ngFor="let tab of tabs;"
+            [value]="tab.id">{{ tab.name }}
+            <span *ngFor="let score of categoryScore" class="text-center">
+               <span *ngIf="tab.name == score.category_majoring">({{score.total}})</span>
+            </span>
+         </ion-segment-button>
+      </ion-segment>
+   </ion-toolbar>
+</ion-header>
+
+<ion-content>
+   <div [ngSwitch]="categories">
+      <div *ngFor="let tab of tabs">
+         <ion-list>
+
+            <ion-list *ngFor="let question of questions;">
+               <ion-item *ngIf="tab.name == question.category_majoring" class="border-bottom padding-bottom-5">
+                  <p text-wrap> {{ question.name }}</p>
+                  <button ion-button clear item-start>
+                     <ion-icon class="font-size-2" name="{{ question.iscorrect == question.my_answer ? 'checkmark': 'close' }}" aria-hidden="true"></ion-icon>
+                  </button>
+                  <button (click)="gotoAnswer(question)" ion-button clear item-end>View</button>
+               </ion-item>
+            </ion-list>
+         </ion-list>
+      </div>
+   </div>
+</ion-content>
+
+<ion-footer>
+   <ion-toolbar>
+      <ion-row>
+         <ion-col text-center>
+            <button ion-button id="btn-end" (click)="gotoExamOverviewPage()" round large color="secondary">End Exam</button>
+         </ion-col>
+      </ion-row>
+   </ion-toolbar>
+</ion-footer>
